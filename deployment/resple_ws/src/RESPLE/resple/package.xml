@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>resple</name>
+  <version>0.0.0</version>
+
+  <description>RESPLE</description>
+  <license>GPLv3</license>
+  <maintainer email="anonymous@abc.com">Anonymous</maintainer>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <build_depend>builtin_interfaces</build_depend>
+  <depend>rclcpp</depend>
+  <depend>yaml-cpp</depend>
+  <depend>std_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>message_runtime</depend>
+  <depend>livox_ros_driver2</depend>
+
+  <test_depend>ament_lint_common</test_depend>
+  <test_depend>ament_lint_auto</test_depend>  
+  <exec_depend>builtin_interfaces</exec_depend>  
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>  
+</package>

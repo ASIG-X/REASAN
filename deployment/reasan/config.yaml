@@ -1,0 +1,74 @@
+# Control parameters
+kp: 35.0
+kd: 1.4
+
+# Goal points array (x, y coordinates)
+goal_points:
+  - [6.0, 0.0]
+  - [0.0, 0.0]
+  # - [5.0, 0.0]
+  # - [0.0, 5.0]
+  # - [-5.0, 0.0]
+  # - [0.0, -5.0]
+
+# Velocity limits
+linear_velocity_clip: 2.0
+linear_velocity_lateral_clip: 1.5
+angular_velocity_clip: 3.0
+
+# Speed limit presets for L1/L2 buttons (locomotion_node_v2 only)
+slow_mode_velocity_limits:
+  forward: 0.5
+  lateral: 0.5
+  angular: 3.0
+
+fast_mode_velocity_limits:
+  forward: 1.5
+  lateral: 1.0
+  angular: 3.0
+
+boundary:
+  x_min: -2.0
+  x_max: 8.0
+  y_min: -3.0
+  y_max: 3.0
+
+manual_rotation: true
+
+# Lidar pitch angle (in degrees) - positive rotates downward
+lidar_pitch_angle_deg: 10.0
+lidar_offset_x: 0.2
+lidar_offset_y: 0.0
+lidar_offset_z: 0.0
+
+# Spherical grid configuration (optional, these are defaults)
+spherical_config:
+  phi_range_min: -180.0
+  phi_range_max: 180.0
+  theta_range_min: -5.0
+  theta_range_max: 55.0
+  phi_res_deg: 2
+  theta_res_deg: 2
+  max_range: 3.0
+
+# Control loop frequency monitoring
+frequency_monitoring:
+  ema_alpha: 0.1  # Smoothing factor for exponential moving average (0.0 = no update, 1.0 = no smoothing)
+  publish_interval: 50  # Publish frequency every N iterations
+
+# Point cloud filtering configuration
+pointcloud_filtering:
+  min_point_distance: 0.1  # Minimum distance from origin (meters)
+  filter_cube:  # Points inside this cube will be filtered out
+    x_min: -0.4
+    x_max: 0.05
+    y_min: -0.1
+    y_max: 0.1
+    z_min: -0.05
+    z_max: 0.2
+
+# Ray filtering configuration
+ray_filtering:
+  threshold: 0.4      # Distance threshold for ray enhancement (meters)
+  multiplier: 1.0     # Multiplier for rays below threshold
+  smoothness: 0.2     # Transition width around threshold for smooth filtering
