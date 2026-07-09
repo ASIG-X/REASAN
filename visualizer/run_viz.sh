@@ -1,0 +1,1 @@
+./go2_visualizer -a tcp://192.168.XXX.XXX:5555 --fontsize 30 --pointsize 5 --fadedist 5 --model go2_model/go2.xml --arrow-width 6.0 --arc-radius 0.8 --arc-gap 0.3 --arrow-scale 0.5 --robot-height -0.1 --arrow-head 0.2 --arc-head 0.1 --robot-scale 0.75
